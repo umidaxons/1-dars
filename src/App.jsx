@@ -1,12 +1,17 @@
-import React from 'react'
-import Benom from './components/Benom'
+import React from "react";
+import Home from "./Home";
+import Create from "./Create";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <div>
-      <Benom/>
-    </div>
-  )
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/create" element={<Create />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
